@@ -215,6 +215,7 @@ button {
 
 .form textarea {
     resize: none;
+    font-family: 'Lora', serif;
 }
 
 .form button {

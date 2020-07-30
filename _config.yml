@@ -3,6 +3,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor/
+  
+url: https://blog.carsonevans.ca
 
 title: Carson's Blog
 subtitle: Somewhat coherent tutorials about web stuff and things.
