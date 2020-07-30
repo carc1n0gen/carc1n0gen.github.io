@@ -45,7 +45,8 @@ name: blog
  */
 function format(str, obj) {
     Object.keys(obj).forEach(function (key) {
-        str = str.replaceAll(`$\{${key}}`, obj[key]);
+        const pattern = new RegExp(`\\$\\{${key}\\}`, 'g');
+        str = str.replace(pattern, obj[key]);
     });
     return str;
 }
