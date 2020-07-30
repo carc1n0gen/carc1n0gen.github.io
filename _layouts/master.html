@@ -1,0 +1,55 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>{% if page.title %}{{ page.title }} :: {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="data:,">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} RSS Feed" href="/feed.xml" />
+
+    <header class="site-header">
+        <div class="container">
+            <img class="site-header-img" src="{{ site.avatar }}" alt="Profile Photo">
+            <a href="/">
+                <h1>{{ site.title }}</h1>
+            </a>
+            <p>{{ site.subtitle }}</p>
+        </div>
+        <nav class="site-nav">
+            <div class="container nav-wrapper">
+                <a {% if page.name == 'index.html' %}class="active"{% endif %} href="/">Blog</a>
+                <a {% if page.name == 'archive.html' %}class="active"{% endif %} href="/archive">Archive</a>
+                <a {% if page.name == 'contact.html' %}class="active"{% endif %} href="/contact">Contact</a>
+                <a href="/feed.xml"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                <form class="site-search" id="search-form" action="/search">
+                    <input type="text" id="q" name="q" class="site-search-input" placeholder="Search for posts"><!--
+                    --><button class="site-search-submit">
+                        <i class="fas fa-search"></i>
+                        <span class="site-search-submit-text">Search</span>
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container site-content">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <i class="fa fa-copyright" aria-hidden="true"></i> <span class="sr-only">Copyright</span> Carson Evans
+    </footer>
+    {% if site.enable_googleanalytics %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleanalytics_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ site.googleanalytics_id }}');
+    </script>
+    {% endif %}
+</html>

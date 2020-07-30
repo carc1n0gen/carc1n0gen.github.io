@@ -1,0 +1,33 @@
+---
+layout: master
+title: Blog
+---
+{% for post in site.posts limit:5 %}
+<article class="post">
+    <header class="post-title">
+        <a href="{{ post.url }}">
+            <h2>{{ post.title }}</h2>
+        </a>
+    </header>
+    <section class="post-content">
+        <p>
+            {{ post.excerpt }}
+            <a href="{{ post.url }}">Read more...</a>
+        </p>
+    </section>
+    <footer>
+        <span class="post-meta">
+            posted by {{ post.author }}
+            <span class="post-meta-sep"></span>
+            {{ post.date | date: '%B %d, %Y' }}
+            {% if site.enable_disqus %}
+            <span class="post-meta-sep"></span>
+            <a href="{{ post.url }}#disqus_thread">Comments</a>
+            {% endif %}
+        </span>
+    </footer>
+</article>
+{% endfor %}
+<div class="all-link card text-center">
+    <a href="/archive">All posts...</a>
+</div>

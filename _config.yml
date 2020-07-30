@@ -1,0 +1,15 @@
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+title: Carson's Blog
+subtitle: Somewhat coherent tutorials about web stuff and things.
+avatar: https://carsonevans.ca/static/img/avatar.jpg
+
+enable_disqus: true
+disqus_shortname: carsonsblog
+
+enable_googleanalytics: true
+googleanalytics_id: UA-67307858-1

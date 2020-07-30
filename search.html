@@ -1,0 +1,77 @@
+---
+layout: master
+title: Search Results
+name: blog
+---
+<template id="template">
+    <article class="post">
+        <header class="post-title">
+            <a href="${url}">
+                <h2>${title}</h2>
+            </a>
+        </header>
+        <section class="post-content">
+            <p>
+                ${excerpt}
+                <a href="${url}">Read more...</a>
+            </p>
+        </section>
+        <footer>
+            <span class="post-meta">
+                posted by ${author}
+                <span class="post-meta-sep"></span>
+                ${date}
+                {% if site.enable_disqus %}
+                <span class="post-meta-sep"></span>
+                <a href="${url}#disqus_thread">Comments</a>
+                {% endif %}
+            </span>
+        </footer>
+    </article>
+</template>
+
+<div id="results">
+    <article class="post">
+        <p>There's nothing here</p>
+    </article>
+</div>
+<div class="all-link card text-center">
+    <a href="/archive">All posts...</a>
+</div>
+
+<script>
+/*
+ * Function allows you to treat regular strings sort of like template strings
+ */
+function format(str, obj) {
+    Object.keys(obj).forEach(function (key) {
+        str = str.replaceAll(`$\{${key}}`, obj[key]);
+    });
+    return str;
+}
+
+window.addEventListener('load', async () => {
+    const template = document.getElementById('template');
+    const searchBox = document.getElementById('q');
+    const results = document.getElementById('results');
+    const params = new URLSearchParams(window.location.search);
+    const response = await fetch('/search.json');
+    const posts = await response.json();
+
+    searchBox.value = params.get('q');
+
+    const filtered = posts.filter((post) => {
+        if (post.title.toLowerCase().indexOf(params.get('q')) > -1) {
+            return true;
+        }
+    });
+
+    if (filtered.length === 0) {
+        return;
+    }
+
+    results.innerHTML = filtered.reduce((accum, post) => {
+        return accum + format(template.innerHTML, { ...post, excerpt: decodeURI(post.excerpt) });
+    }, '');
+});
+</script>

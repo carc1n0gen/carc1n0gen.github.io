@@ -1,0 +1,12 @@
+---
+layout: compress
+---
+[{% for post in site.posts %}
+    {
+      "url": "{{ site.url }}{{ post.url }}",
+      "title": "{{ post.title }}",
+      "author": "{{ post.author }}",
+      "excerpt": "{{ post.excerpt | uri_escape }}",
+      "date": "{{ post.date | date: '%B %d, %Y' }}"
+    }{% if forloop.last != true %},{% endif %}
+{% endfor %}]

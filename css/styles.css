@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lora:400,400i,700,700i&subset=cyrillic');
+@import url('pygments-native.css');
+@import url('fontawesome.min.css');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #F7FAFC;
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    color: rgba(0, 0, 0, .7);
+}
+
+a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.site-header {
+    padding: 42px 0 0;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    /*border-bottom: 2px solid #F0F0F0;*/
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.6rem;
+}
+.site-header a {
+    color: rgba(0, 0, 0, .7);
+    text-decoration: none;
+}
+
+.site-header p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.site-header-img {
+    float: right;
+    border-radius: 100%;
+    width: 100px;
+    border: 1px solid #E2E8F0;
+}
+
+.site-nav {
+    margin-top: 50px;
+    padding: 13px 0 15px 0;
+    border-top: 2px solid #E2E8F0;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+.site-nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .44);
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.site-nav a:last-of-type {
+    margin-right: 0;
+}
+
+.site-nav a:hover {
+    color: rgba(0, 0, 0, .6);
+}
+
+.site-nav a.active {
+    font-weight: bold;
+    border-bottom: 3px solid #E2E8F0;
+}
+
+.site-search {
+    float: right;
+}
+
+.site-search-input,
+.site-search-submit {
+    margin: -5px 0 0 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.site-search-input {
+    border: 1px solid #CBD5E0;
+    border-right: none;
+    background-color: transparent;
+    border-radius: 6px 0 0 6px;
+    color: rgba(0, 0, 0, .7);
+}
+
+.site-search-submit {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #718096;
+    border: 1px solid #1A202C;
+    color: #fff;
+    border-radius: 0 6px 6px 0;
+}
+
+.post,
+.card {
+    padding: 20px;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    border: 2px solid #E2E8F0;
+}
+
+.post-title h1,
+.post-title h2 {
+    margin: 0;
+}
+
+.post-title a {
+    text-decoration: none;
+}
+
+.post-meta {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .44);
+}
+
+.post-meta a:hover {
+    color: rgba(0, 0, 0, .6);
+}
+
+.post-meta-sep:after {
+    margin: 0 0.45rem;
+    content: '·';
+}
+
+.post-footer {
+    margin-top: 35px;
+    border-top: 1px solid #ddd;
+}
+
+.archive a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.archive-year {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.archive-month-day {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .44);
+}
+
+.all-link {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.all-link a {
+    text-decoration: none;
+}
+
+.site-footer {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.site-footer a {
+    font-weight: normal;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 48rem;
+}
+
+.form label {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form label,
+.form input,
+.form textarea {
+    display: block;
+    width: 100%;
+}
+
+.form input,
+.form textarea {
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    font-weight: 100;
+    background-color: #fcfcfcff;
+}
+
+.form input,
+.form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.form textarea {
+    resize: none;
+}
+
+.form button {
+    padding: 0.5rem 2rem;
+    margin: 0;
+    background-color: #718096;
+    border: 1px solid #1A202C;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    display: block;
+    margin-left: auto;
+}
+
+.alert {
+    position: relative;
+    padding: 1rem 1rem 1rem 2.5rem;
+    margin: 0 0 0.5rem 0;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+.alert-icon {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.5rem;
+    font-size: 2rem;
+}
+
+.alert-warning {
+    background-color: rgb(255, 239, 136);
+    color: rgb(105, 91, 0);
+}
+
+.highlight pre {
+    overflow-y: auto;
+    padding: 1rem;
+    margin: 0 -22px;
+    /*color: #8e8c84;*/
+    /*color: #f8f8f2;*/
+    /*color: #cdcda2;*/
+    color: #8e8c84;
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .site-header {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .site-header-img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        /*width: 100px;*/
+    }
+
+    .site-search {
+        margin: 1.5rem 0 0 0;
+        float: none;
+    }
+
+    .site-search-submit {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .site-nav {
+        margin-top: 15px;
+    }
+
+    .site-search-submit-text {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+
+    .post,
+    .card {
+        padding: 10px;
+    }
+
+    .highlight pre {
+        margin: 0 -12px;
+    }
+}
