@@ -27,10 +27,10 @@ from flask import request
 
 @app.before_request
 def before_request():
-	method = request.form.get('_method')
-	if method:
-		# override the request method if there was a method spoofing form field.
-		request.method = method
+    method = request.form.get('_method')
+        if method:
+            # override the request method if there was a method spoofing form field.
+            request.method = method
 ```
 
 But I was quickly given a error explaining that the request object was read only.  So It was clear I was going to have to do this in a wsgi middleware, which executes before the flask app code.  This also turned out to be not so simple. This is my original naive solution.
