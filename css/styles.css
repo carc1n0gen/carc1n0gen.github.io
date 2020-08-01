@@ -54,6 +54,10 @@ button {
     border: 1px solid #E2E8F0;
 }
 
+.site-title {
+    display: inline;
+}
+
 .site-nav {
     margin-top: 50px;
     padding: 13px 0 15px 0;
@@ -94,11 +98,13 @@ button {
 }
 
 .site-search-input {
-    border: 1px solid #CBD5E0;
+    border: 1px solid #E8E8E8;
     border-right: none;
     background-color: transparent;
     border-radius: 6px 0 0 6px;
     color: rgba(0, 0, 0, .7);
+    background-color: #fcfcfcff;
+    font-weight: 100;
 }
 
 .site-search-submit {
@@ -219,7 +225,6 @@ button {
     background-color: #fcfcfcff;
     font-weight: 100;
     font-size: 1.2rem;
-    font-family: 'Lora', serif;
 }
 
 .form textarea {
