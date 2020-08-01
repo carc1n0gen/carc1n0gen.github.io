@@ -23,7 +23,7 @@ layout: compress
                 <a {% if page.name == 'index.html' %}class="active"{% endif %} href="{{ site.url }}/">Blog</a>
                 <a {% if page.name == 'archive.html' %}class="active"{% endif %} href="{{ site.url }}/archive">Archive</a>
                 <a {% if page.name == 'contact.html' %}class="active"{% endif %} href="{{ site.url }}/contact">Contact</a>
-                <a href="{{ site.url }}/feed.xml"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                <a href="{{ site.url }}/feed.xml"><i class="fa fa-rss" aria-hidden="true"></i><span class="sr-only">feed</span></a>
                 <form class="site-search" id="search-form" action="/search">
                     <input type="text" id="q" name="q" class="site-search-input" placeholder="Search for posts"><!--
                     --><button class="site-search-submit">
@@ -40,7 +40,10 @@ layout: compress
     </main>
 
     <footer class="site-footer">
-        <i class="fa fa-copyright" aria-hidden="true"></i> <span class="sr-only">Copyright</span> Carson Evans
+        &copy; Carson Evans
+        <a href="https://twitter.com/carc1n0gen" class="footer-social-link"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">twitter</span></a>
+        <a href="https://github.com/carc1n0gen" class="footer-social-link"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">github</span></a>
+        <a href="{{ site.url }}/feed.xml" class="footer-social-link"><i class="fa fa-rss" aria-hidden="true"></i><span class="sr-only">feed</span></a>
     </footer>
     {% if site.enable_googleanalytics %}
     <!-- Global site tag (gtag.js) - Google Analytics -->

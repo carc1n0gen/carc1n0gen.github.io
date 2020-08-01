@@ -31,7 +31,6 @@ button {
     padding: 42px 0 0;
     margin-bottom: 25px;
     background-color: #ffffff;
-    /*border-bottom: 2px solid #F0F0F0;*/
 }
 
 .site-header h1 {
@@ -142,6 +141,10 @@ button {
     content: '·';
 }
 
+.post-content {
+    line-height: 1.8rem;
+}
+
 .post-footer {
     margin-top: 35px;
     border-top: 1px solid #ddd;
@@ -180,15 +183,24 @@ button {
     font-weight: normal;
 }
 
+.footer-social-link {
+    margin: 0 0.5rem;
+}
+
 .container {
     margin: 0 auto;
     max-width: 48rem;
 }
 
+
+.form {
+    font-weight: 100;
+}
+
 .form label {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .form label,
@@ -200,22 +212,18 @@ button {
 
 .form input,
 .form textarea {
-    border: 1px solid #E8E8E8;
-    border-radius: 4px;
-    font-weight: 100;
-    background-color: #fcfcfcff;
-}
-
-.form input,
-.form textarea {
     padding: 0.5rem;
     margin-bottom: 1rem;
+    border: 1px solid #E8E8E8;
+    border-radius: 4px;
+    background-color: #fcfcfcff;
+    font-weight: 100;
     font-size: 1.2rem;
+    font-family: 'Lora', serif;
 }
 
 .form textarea {
     resize: none;
-    font-family: 'Lora', serif;
 }
 
 .form button {
@@ -250,13 +258,14 @@ button {
     color: rgb(105, 91, 0);
 }
 
+code.highlighter-rouge {
+    font-weight: 600;
+}
+
 .highlight pre {
     overflow-y: auto;
     padding: 1rem;
     margin: 0 -22px;
-    /*color: #8e8c84;*/
-    /*color: #f8f8f2;*/
-    /*color: #cdcda2;*/
     color: #8e8c84;
     line-height: 1.5rem;
 }
@@ -286,6 +295,10 @@ button {
 }
 
 @media screen and (max-width: 576px) {
+    .site-header {
+        padding-top: 1rem;
+    }
+
     .site-nav {
         margin-top: 15px;
     }
