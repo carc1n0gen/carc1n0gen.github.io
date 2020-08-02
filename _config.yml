@@ -1,4 +1,6 @@
 permalink: pretty
+plugins:
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
