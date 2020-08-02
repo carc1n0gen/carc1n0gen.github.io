@@ -27,7 +27,8 @@ layout: compress
                 <a {% if page.name == 'contact.html' %}class="active"{% endif %} href="{{ site.url }}/contact">Contact</a>
                 <a href="{{ site.url }}/feed.xml"><i class="fa fa-rss" aria-hidden="true"></i><span class="sr-only">feed</span></a>
                 <form class="site-search" id="search-form" action="/search">
-                    <input type="text" id="q" name="q" class="site-search-input" placeholder="Search for posts"><!--
+                    <input type="text" id="q" name="q" class="site-search-input" placeholder="Search for posts" aria-describedby="search-feedback"><!--
+                    --><span id="search-feedback" class="search-feedback"></span><!--
                     --><button class="site-search-submit">
                         <i class="fas fa-search"></i>
                         <span class="site-search-submit-text">Search</span>
@@ -48,13 +49,26 @@ layout: compress
         <a href="{{ site.url }}/feed.xml" class="footer-social-link"><i class="fa fa-rss" aria-hidden="true"></i><span class="sr-only">feed</span></a>
     </footer>
     {% if site.enable_googleanalytics %}
+    <script>
+    const searchForm = document.getElementById('search-form');
+    const searchBox = document.getElementById('q');
+    const searchFeedback = document.getElementById('search-feedback');
+    searchForm.addEventListener('submit', (e) => {
+        searchBox.classList.remove('invalid');
+        if (!searchBox.value || searchBox.value.trim().length < 3) {
+            e.preventDefault();
+            searchBox.classList.add('invalid');
+            searchFeedback.innerText = 'Search query must be at least three characters.'
+        }
+    });
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleanalytics_id }}"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', '{{ site.googleanalytics_id }}');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.googleanalytics_id }}');
     </script>
     {% endif %}
 </html>

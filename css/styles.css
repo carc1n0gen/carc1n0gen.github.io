@@ -33,7 +33,6 @@ button {
 
 .site-header {
     padding: 42px 0 0;
-    margin-bottom: 25px;
     background-color: #ffffff;
 }
 
@@ -91,6 +90,7 @@ button {
 }
 
 .site-search {
+    position: relative;
     float: right;
 }
 
@@ -111,6 +111,16 @@ button {
     font-weight: 100;
 }
 
+.site-search-input.invalid {
+    color: rgb(144, 130, 0);
+    border-color: rgb(240, 230, 140);
+    background-color: rgb(255, 252, 229);
+}
+
+.site-search-input.invalid::placeholder {
+    color: rgb(144, 130, 0);
+}
+
 .site-search-submit {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -120,10 +130,26 @@ button {
     border-radius: 0 6px 6px 0;
 }
 
+.search-feedback {
+    display: none;
+    position: absolute;
+    top: 120%;
+    padding: 0.5rem;
+    width: 70%;
+    background-color: rgb(255, 252, 229);
+    border: 1px solid rgb(240, 230, 140);
+    color: rgb(144, 130, 0);
+    font-size: 0.9rem;
+}
+
+.site-search-input.invalid ~ .search-feedback {
+    display: block;
+}
+
 .post,
 .card {
     padding: 20px;
-    margin-bottom: 12px;
+    margin: 12px 0;
     background-color: #ffffff;
     border: 2px solid #E2E8F0;
 }
@@ -289,12 +315,16 @@ code.highlighter-rouge {
         float: none;
         display: block;
         margin: 0 auto;
-        /*width: 100px;*/
     }
 
     .site-search {
-        margin: 1.5rem 0 0 0;
+        margin: 1.5rem auto 0 auto;
         float: none;
+        width: 350px;
+    }
+
+    .search-feedback {
+        width: 100%;
     }
 
     .site-search-submit {
@@ -310,6 +340,10 @@ code.highlighter-rouge {
 
     .site-nav {
         margin-top: 15px;
+    }
+
+    .site-search {
+        width: 100%;
     }
 
     .site-search-submit-text {
