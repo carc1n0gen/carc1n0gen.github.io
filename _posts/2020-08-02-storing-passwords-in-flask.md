@@ -4,7 +4,7 @@ author: Carson Evans
 tags: flask password hash hashing bcrypt
 ---
 
-There is a plethora of guides out there about how to securely store passwords, but there are not as many of those guides that apply to Flask specifically.  I spend quite a but of my free time on the Pallets discord helping people out with their Flask questions, and often enough we have people storing passwords as plain text.  So I thought I would write about the different options one has for correctly storing passwords in a Flask app.
+There is a plethora of guides out there about how to securely store passwords, but there are not as many of those guides that apply to Flask specifically.  I spend quite a bit of my free time on the Pallets discord helping people out with their Flask questions, and often enough we have people storing passwords as plain text.  So I thought I would write about the different options one has for correctly storing passwords in a Flask app.
 
 ## How To Store Passwords
 
