@@ -62,7 +62,8 @@ window.addEventListener('load', async () => {
     searchBox.value = params.get('q');
 
     const filtered = posts.filter((post) => {
-        if (post.title.toLowerCase().indexOf(params.get('q')) > -1) {
+        const q = params.get('q') || '';
+        if (post.title.toLowerCase().indexOf(q.toLowerCase()) > -1) {
             return true;
         }
     });
