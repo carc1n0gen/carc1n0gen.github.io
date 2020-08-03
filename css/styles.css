@@ -51,6 +51,20 @@ h2:focus > .heading-anchor {
     visibility: visible;
 }
 
+h2:target {
+    padding: 0.5rem;
+    background-color: rgb(240, 230, 140);
+    border-radius: 4px;
+}
+
+h2:target > .heading-anchor {
+    color: rgb(198, 178, 0)
+}
+
+h2:target > .heading-anchor:hover {
+    color: inherit;
+}
+
 .site-header {
     padding: 42px 0 0;
     background-color: #ffffff;
