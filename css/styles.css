@@ -53,12 +53,12 @@ h2:focus > .heading-anchor {
 
 h2:target {
     padding: 0.5rem;
-    background-color: rgb(240, 230, 140);
+    background-color: #dff1fc;
     border-radius: 4px;
 }
 
 h2:target > .heading-anchor {
-    color: rgb(198, 178, 0)
+    color: #8fb9d2;
 }
 
 h2:target > .heading-anchor:hover {
