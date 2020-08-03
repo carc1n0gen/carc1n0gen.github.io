@@ -17,6 +17,10 @@ body {
     color: rgba(0, 0, 0, .7);
 }
 
+h1 {
+    font-size: 2.5rem;
+}
+
 a {
     font-weight: bold;
     text-decoration: underline;
@@ -29,6 +33,22 @@ li {
 
 button {
     cursor: pointer;
+}
+
+.heading-anchor {
+    margin-left: 0.5rem;
+    color: #ddd;
+    visibility: hidden;
+}
+
+.heading-anchor:hover {
+    color: inherit;
+}
+
+h2:hover > .heading-anchor,
+h2:active > .heading-anchor,
+h2:focus > .heading-anchor {
+    visibility: visible;
 }
 
 .site-header {

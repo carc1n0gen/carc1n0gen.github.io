@@ -50,17 +50,35 @@ layout: compress
     </footer>
     {% if site.enable_googleanalytics %}
     <script>
-    const searchForm = document.getElementById('search-form');
-    const searchBox = document.getElementById('q');
-    const searchFeedback = document.getElementById('search-feedback');
-    searchForm.addEventListener('submit', (e) => {
-        searchBox.classList.remove('invalid');
-        if (!searchBox.value || searchBox.value.trim().length < 3) {
-            e.preventDefault();
-            searchBox.classList.add('invalid');
-            searchFeedback.innerText = 'Search query must be at least three characters.'
-        }
-    });
+    /* Site search */
+    (() => {
+        const searchForm = document.getElementById('search-form');
+        const searchBox = document.getElementById('q');
+        const searchFeedback = document.getElementById('search-feedback');
+        searchForm.addEventListener('submit', (e) => {
+            searchBox.classList.remove('invalid');
+            if (!searchBox.value || searchBox.value.trim().length < 3) {
+                e.preventDefault();
+                searchBox.classList.add('invalid');
+                searchFeedback.innerText = 'Search query must be at least three characters.'
+            }
+        });
+    })();
+
+    /* Heading anchors */
+    (() => {
+        window.addEventListener('load', () => {
+            document.querySelectorAll('main h2').forEach((h2) => {
+                if (h2.hasAttribute('id')) {
+                    const a = document.createElement('a');
+                    a.setAttribute('href', `#${h2.getAttribute("id")}`);
+                    a.innerHTML = '<i class="fas fa-link" aria-hidden="true"></i><span class="sr-only">link to this heading</span>';
+                    a.classList.add('heading-anchor');
+                    h2.appendChild(a);
+                }
+            });
+        });
+    })();
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleanalytics_id }}"></script>
