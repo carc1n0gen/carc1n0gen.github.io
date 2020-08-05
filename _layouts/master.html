@@ -48,7 +48,6 @@ layout: compress
         <a href="https://github.com/carc1n0gen" class="footer-social-link"><i class="fab fa-github" aria-hidden="true"></i><span class="sr-only">github</span></a>
         <a href="{{ site.url }}/feed.xml" class="footer-social-link"><i class="fa fa-rss" aria-hidden="true"></i><span class="sr-only">feed</span></a>
     </footer>
-    {% if site.enable_googleanalytics %}
     <script>
     /* Site search */
     (() => {
@@ -63,6 +62,19 @@ layout: compress
                 searchFeedback.innerText = 'Search query must be at least three characters.'
             }
         });
+    })();
+
+    /* Contact form update subject */
+    (() => {
+        const contactForm = document.getElementById('contact-form');
+        const nameField = document.getElementById('name');
+        const subjectField = document.getElementById('subject');
+        if (contactForm) {
+            subjectField.value += ' from ';
+            nameField.addEventListener('change', (e) => {
+                subjectField.value += e.target.value;
+            });
+        }
     })();
 
     /* Heading anchors */
@@ -80,6 +92,7 @@ layout: compress
         });
     })();
     </script>
+    {% if site.enable_googleanalytics %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleanalytics_id }}"></script>
     <script>
