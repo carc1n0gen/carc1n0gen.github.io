@@ -52,15 +52,21 @@ We can simply open up the [demo we copied this sample code from](https://getboot
 
 So the first thing we notice is that the root modal div changes from `class="modal fade"` to `class="modal fade show"`, and the inline style changes to `style="display: block;"`.
 
-![Animated gif showing the changes to the modal when it is shown](/img/posts/bootstrap-modals-without-jquery/1.gif)
+<video controls>
+  <source src="/post-assets/bootstrap-modals-without-jquery/1.mp4" type="video/mp4">
+</video>
 
 But this isn't actually enough, turns out `class="modal-open"` is also added the body
 
-![Animated gif showing the changes to the body when the modal is shown](/img/posts/bootstrap-modals-without-jquery/2.gif)
+<video controls>
+  <source src="/post-assets/bootstrap-modals-without-jquery/2.mp4" type="video/mp4">
+</video>
 
 Finally the backdrop div is injected to the bottom of the body which gives the dark, partially transparent shadow behind the modal.
 
-![Animated gif showing the backdrop div injected to the end of the body](/img/posts/bootstrap-modals-without-jquery/3.gif)
+<video controls>
+  <source src="/post-assets/bootstrap-modals-without-jquery/3.mp4" type="video/mp4">
+</video>
 
 So if we manually update our code to have these changes the modal will show.
 
