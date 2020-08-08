@@ -245,4 +245,4 @@ Now obviously there are plenty of other bootstrap components that also depend on
 
 NOTE: I was unable to figure out how to make it so when you click the backdrop it closes the modal.  If I figure it out, I will update the post.  Or if anyone reading this has an idea, feel free to comment below, or reach out to me on my [contact form](https://blog.carsonevans.ca/contact/).
 
-If you wish to reference a complete fully working demo of all of this instead of the broken up chunks in this post, I have one [here on my GitHub](https://github.com/carc1n0gen/tutorial-apps/tree/master/bootstrap-modal-without-jquery). I also have a [live demo](/post-assets/bootstrap-modals-without-jquery/demo.html)
+If you wish to reference a complete fully working demo of all of this instead of the broken up chunks in this post, I have one [here on my GitHub](https://github.com/carc1n0gen/tutorial-apps/tree/master/bootstrap-modal-without-jquery). I also have a [live demo](/post-assets/bootstrap-modals-without-jquery/demo.html).
