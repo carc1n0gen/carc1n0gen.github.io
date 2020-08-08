@@ -35,6 +35,10 @@ button {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+}
+
 .heading-anchor {
     margin-left: 0.5rem;
     color: #ddd;
