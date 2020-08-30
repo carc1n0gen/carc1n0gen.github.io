@@ -1,3 +1,8 @@
+---
+author: Carson Evans
+title: Bootstrap Modals Without jQuery
+---
+
 In this post I'll be showing how you can pretty easily write your own vanilla JavaScript to replace jQuery when using bootstrap modals.
 
 ## Preparation
