@@ -297,6 +297,7 @@ h2:target > .heading-anchor:hover {
     background-color: #fcfcfcff;
     font-weight: 100;
     font-size: 1.2rem;
+    font-family: inherit;
 }
 
 .form textarea {
