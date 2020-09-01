@@ -415,4 +415,13 @@ code.highlighter-rouge {
     .highlight pre {
         margin: 0 -12px;
     }
+
+    .form-controls {
+        flex-direction: column;
+    }
+
+    .form button {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
 }
