@@ -6,6 +6,7 @@ author: Carson Evans
 {% raw %}
 
 ```jinja
+<div id="success-message" style="display: none;"></div>
 <form id="form" method="POST">
     {{ form.csrf_token }}
     <div class="text-danger my-2" id="csrf_token-error">
@@ -23,7 +24,7 @@ author: Carson Evans
     </div>
     <button class="btn btn-primary">Signup</button>
 </form>
-<div id="success-message" style="display: none;"></div>
+
 <script>
 const form = document.getElementById('form');
 const successMessage = document.getElementById('success-message');
@@ -56,7 +57,6 @@ form.addEventListener('submit', async (e) => {
     });
     if (response.ok) {
         successMessage.innerHTML = await response.text();
-        form.style.display = 'none';
         successMessage.style.display = 'block';
     } else {
         const errors = await response.json();
