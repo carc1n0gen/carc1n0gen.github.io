@@ -287,5 +287,5 @@ Submit that with invalid data, and the fields will change to an error state
 with error messages.  Submit valid data, and you'll get a success message.
 
 If you would like to reference a complete working flask app demonstrating all
-this, I have one right [here on github](https://github.com/carc1n0gen/tutorial-apps/tree/master/flask-wtforms-ajax.
+this, I have one right [here on github](https://github.com/carc1n0gen/tutorial-apps/tree/master/flask-wtforms-ajax).
 {% endraw %}
