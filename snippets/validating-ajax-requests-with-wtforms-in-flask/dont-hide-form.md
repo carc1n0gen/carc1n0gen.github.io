@@ -1,11 +1,30 @@
 ---
-layout: master
+layout: snippet
 author: Carson Evans
 ---
 
-<div class="card">
-
 {% raw %}
+
+```jinja
+<div id="success-message" style="display: none;"></div>
+<form id="form" method="POST">
+    {{ form.csrf_token }}
+    <div class="text-danger my-2" id="csrf_token-error">
+    </div>
+    
+    <div class="form-group">
+        {{ form.username.label }}
+        {{ form.username(class='form-control') }}
+        <div id="username-error" class="invalid-feedback"></div>
+    </div>
+    <div class="form-group">
+        {{ form.age.label }}
+        {{ form.age(class='form-control') }}
+        <div id="age-error" class="invalid-feedback"></div>
+    </div>
+    <button class="btn btn-primary">Signup</button>
+</form>
+```
 
 ```html
 <script>
@@ -40,7 +59,6 @@ form.addEventListener('submit', async (e) => {
     });
     if (response.ok) {
         successMessage.innerHTML = await response.text();
-        form.style.display = 'none';
         successMessage.style.display = 'block';
     } else {
         const errors = await response.json();
@@ -52,6 +70,5 @@ form.addEventListener('submit', async (e) => {
 });
 </script>
 ```
+
 {% endraw %}
-    
-</div>
