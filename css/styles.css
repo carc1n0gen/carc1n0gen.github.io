@@ -144,7 +144,7 @@ h2:target > .heading-anchor:hover {
 }
 
 .site-search-input {
-    border: 1px solid #E8E8E8;
+    border: 1px solid #d2d2d2;
     border-right: none;
     background-color: transparent;
     border-radius: 6px 0 0 6px;
@@ -292,7 +292,7 @@ h2:target > .heading-anchor:hover {
 .form textarea {
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border: 1px solid #E8E8E8;
+    border: 1px solid #d2d2d2;
     border-radius: 4px;
     background-color: #fcfcfcff;
     font-weight: 100;
