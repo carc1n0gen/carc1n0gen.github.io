@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata|Lora:400,400i,700,700i&subset=cyrillic');
+/* @import url('https://fonts.googleapis.com/css?family=Inconsolata|Lora:400,400i,700,700i&subset=cyrillic'); */
 @import url('pygments-native.css');
 @import url('fontawesome.min.css');
 
@@ -13,7 +13,8 @@ html {
 body {
     margin: 0;
     font-size: 18px;
-    font-family: 'Lora', serif;
+/*     font-family: 'Lora', serif; */
+    font: 400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Segoe UI Symbol","Segoe UI Emoji","Apple Color Emoji",Roboto,Helvetica,Arial,sans-serif;
     color: rgba(0, 0, 0, .7);
 }
 
