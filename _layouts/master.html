@@ -103,4 +103,7 @@ layout: compress
     gtag('config', '{{ site.googleanalytics_id }}');
     </script>
     {% endif %}
+    {% if site.disqus_shortname %}
+    <script id="dsq-count-scr" src="//carsonsblog.disqus.com/count.js" async></script>
+    {% endif %}
 </html>
