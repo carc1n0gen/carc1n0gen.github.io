@@ -157,6 +157,18 @@ window.addEventListener('load', () => {
       }
     });
   });
+
+  // We also want the modal to close if the area out side the modal dialog is clicked.
+  // So we can attach a click handler to the .modal element
+  document.querySelectorAll('.modal').forEach((modal) => {
+    modal.addEventListener('click', (event) => {
+      // We have to check that the element that was clicked is actually the .modal element,
+      // because this event will fire when children of the .modal element are clicked too (like the modal dialog).
+      if (event.target === modal) {
+        closeModal(modal);
+      }
+    });
+  });
 });
 ```
 
@@ -248,6 +260,6 @@ Now when you show and hide the modal, you'll see we now have the exact same tran
 
 Now obviously there are plenty of other bootstrap components that also depend on jQuery.  Hopefully this post gives you an idea on how you can use plain JavaScript to handle those without jQuery too.  Maybe I will write about some of the other components in the future also.
 
-NOTE: I was unable to figure out how to make it so when you click the backdrop it closes the modal.  If I figure it out, I will update the post.  Or if anyone reading this has an idea, feel free to comment below, or reach out to me on my [contact form](https://blog.carsonevans.ca/contact/).
+~~NOTE: I was unable to figure out how to make it so when you click the backdrop it closes the modal.  If I figure it out, I will update the post.  Or if anyone reading this has an idea, feel free to comment below, or reach out to me on my [contact form](https://blog.carsonevans.ca/contact/).~~ I've updated the snippets, and the linked example app to close the modal when you click the area outside the modal dialog.
 
 If you wish to reference a complete fully working demo of all of this instead of the broken up chunks in this post, I have one [here on my GitHub](https://github.com/carc1n0gen/tutorial-apps/tree/master/bootstrap-modal-without-jquery). I also have a [live demo](/post-assets/bootstrap-modals-without-jquery/demo.html).
