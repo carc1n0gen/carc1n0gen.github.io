@@ -133,6 +133,7 @@ h2:target > .heading-anchor:hover {
 }
 
 .site-search {
+    top: 2px;
     position: relative;
     float: right;
 }
