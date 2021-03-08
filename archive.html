@@ -16,7 +16,7 @@ name: archive
     {% endif %}
 
     <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url }}" class="archive-link">{{ post.title }}</a>
         <span class="archive-month-day">{{ post.date | date: '%B %d' }}</span>
     </li>
 
